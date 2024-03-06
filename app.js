@@ -19,7 +19,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public'), {maxAge: '1h', etag: false}));
+app.use(express.static(path.join(__dirname, 'public'), {maxAge: 3_600_000}));
 
 app.use('/', indexRouter);
 // app.use('/users', usersRouter);
